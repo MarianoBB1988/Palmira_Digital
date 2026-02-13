@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 const sections = [
   {
@@ -39,14 +40,14 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+              <div className="flex h-10 w-12 items-center justify-center rounded-lg bg-primary" >
                 <span className="font-serif text-xl font-bold text-primary-foreground">
-                  P
+                   <Image src="/logobk.png" alt="Logo" width={100} height={100} style={{padding:'5px'}}/>
                 </span>
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-lg font-bold leading-tight text-foreground">
-                  Palmira
+                  PALMIRA
                 </span>
                 <span className="text-xs font-semibold uppercase tracking-widest text-secondary">
                   Digital

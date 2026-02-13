@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter, Merriweather } from 'next/font/google'
+import { ScrollToTop } from '@/components/scroll-to-top'
 
 import './globals.css'
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         className={`${_inter.variable} ${_merriweather.variable} font-sans antialiased`}
       >
         {children}
+        <ScrollToTop />
       </body>
     </html>
   )

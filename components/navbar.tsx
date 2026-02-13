@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { Menu, X, Search } from "lucide-react"
 import Image from "next/image"
+import { WeatherWidget } from "./weather-widget"
 
 const categories = [
   "Inicio",
@@ -24,10 +25,13 @@ export function Navbar() {
       {/* Top bar */}
       <div className="bg-primary text-primary-foreground">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 text-sm">
-          <span className="hidden sm:inline">
-            Febrero 12, 2026 | Nueva Palmira, Colonia
-          </span>
-          <span className="sm:hidden text-xs">Feb 12, 2026</span>
+          <div className="flex items-center gap-3">
+            <span className="hidden sm:inline">
+              Febrero 12, 2026 | Nueva Palmira, Colonia
+            </span>
+            <span className="sm:hidden text-xs">Feb 12, 2026</span>
+            <WeatherWidget />
+          </div>
           <div className="flex items-center gap-4">
             <button
               onClick={() => setSearchOpen(!searchOpen)}
@@ -58,14 +62,14 @@ export function Navbar() {
       <nav className="bg-card border-b border-border shadow-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
           <Link href="/" className="flex items-center gap-2">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
+            <div className="flex h-10 w-14 items-center justify-center rounded-lg">
               <span className="font-serif text-xl font-bold text-primary-foreground">
-                <Image src="/logo.png" alt="Logo" width={30} height={30} />
+                <Image src="/logo.png" alt="Logo" width={100} height={100}/>
               </span>
             </div>
             <div className="flex flex-col">
               <span className="font-serif text-xl font-bold leading-tight text-foreground">
-                Palmira
+                PALMIRA
               </span>
               <span className="text-xs font-semibold uppercase tracking-widest text-secondary">
                 Digital

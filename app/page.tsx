@@ -1,4 +1,5 @@
 import { Navbar } from "@/components/navbar"
+import { CotizacionesBar } from "@/components/cotizaciones-bar"
 import { BreakingNews } from "@/components/breaking-news"
 import { HeroSection } from "@/components/hero-section"
 import { LatestNews } from "@/components/latest-news"
@@ -11,6 +12,7 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      <CotizacionesBar />
       <BreakingNews />
       <main>
         <HeroSection />
